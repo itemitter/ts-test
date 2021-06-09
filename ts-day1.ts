@@ -14,8 +14,8 @@ const xiaojiejies: String[] = ['谢大脚', '王笑笑', '黄阿黄']
 
 const xiaojiejiess: String[] = ['谢大脚', '谢大脚213', '456']
 
-class Person {}
-const dajiao: Person = new Person()
+class PersonZ {}
+const dajiaoZ: PersonZ = new PersonZ()
 
 const jiaoxiaojiejie:() => string = () => {
     return '大脚';
@@ -80,8 +80,8 @@ const xiaojiejiejiejies: Lady[]= [
 ]
 
 class Madam {
-    name: string;
-    age: number;
+    name: string | undefined;
+    age: number | undefined;
 }
 
 const xiaoxiaoxiao: Madam[]= [
@@ -131,7 +131,7 @@ const screenResumes = (girl: Girl) => {
 // 类型别名可以直接给类型， 比如String, 而接口必须代表对象
 type Girl1 =string;
 
-const girl = {
+const girlZ = {
     name: '大师',
     age: 18,
     bust: 456,
@@ -168,7 +168,7 @@ const girla = {
 
 const getResumeResume = (girla: Girlss) => {
     console.log(girla.name + '年龄是' + girla.age);
-    console.log(girla.name + '胸围是' + girla.bust);
+    console.log(girla.name + '腿长是' + girla.bust);
     girla.waistline && console.log(girla.name + '腰围是' + girla.waistline);
     girla.sex && console.log(girla.name + '性别是' + girla.sex);
     
@@ -184,6 +184,70 @@ interface Girl {
     [propname: string]:any;
     say(): string;
 }
+
+
+
+const girlaa = {
+    name: 'dajiao',
+    age: 18,
+    bust: 105,
+    waistline: 456,
+    sex: 'nv',
+    say() {
+        return 'sfsad'
+    },
+    teach() {
+        return 'asfdasd'
+    }
+}
+
+class LadyS {
+    content="hi ,shuiage";
+    sayHello() {
+        return this.content
+    }
+}
+
+const goddess = new LadyS();
+console.log(goddess.sayHello);
+
+class XiaojiejieZ extends LadyS {
+    sayLove() {
+        return 't love you'
+    }
+}
+
+const goddesss = new XiaojiejieZ();
+console.log(goddesss.sayHello());
+console.log(goddesss.sayLove());
+
+class AXiaojiejie extends LadyS {
+    sayLove() {
+        return 'l love you';
+    }
+    sayHello() {
+        return 'hi, honey!'
+    }
+}
+
+class AAXiaojiejie extends LadyS {
+    sayLove() {
+        return 'l love you'
+    }
+    sayHello() {
+        return super.sayHello() + '.nihao'
+    }
+}
+
+
+class APersonZ {
+    name: string | undefined;
+}
+
+const personZ = new APersonZ();
+personZ.name = "jspang.com";
+
+console.log(personZ.name);
 
 
 
